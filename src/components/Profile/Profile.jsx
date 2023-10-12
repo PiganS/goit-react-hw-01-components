@@ -1,10 +1,10 @@
-import { Container, Avatar, DescriptionDiv, Name, Info, StatusList, StatusLi, Label, Quontity } from "./Profile.styled";
+import { Container, Avatar, Description, Name, Info, StatsList, StatsLi, Label, Quontity } from "./Profile.styled";
 
 
 export const Profile = ({username ,tag ,location ,avatar ,stats })=>{
  return (
   <Container>
-    <DescriptionDiv>
+    <Description>
       <Avatar
         src={avatar}
         alt="User avatar"
@@ -12,21 +12,21 @@ export const Profile = ({username ,tag ,location ,avatar ,stats })=>{
       <Name>{username}</Name>
       <Info>{tag}</Info>
       <Info>{location}</Info>
-    </DescriptionDiv>
+    </Description>
   
-    <StatusList>
-      <StatusLi>
+    <StatsList>
+      <StatsLi>
         <Label>Followers</Label>
         <Quontity>{stats.followers}</Quontity>
-      </StatusLi>
-      <StatusLi>
+      </StatsLi>
+      <StatsLi>
         <Label>Views</Label>
         <Quontity>{stats.views}</Quontity>
-      </StatusLi>
-      <StatusLi>
+      </StatsLi>
+      <StatsLi>
         <Label>Likes</Label>
         <Quontity>{stats.likes}</Quontity>
-      </StatusLi>
-    </StatusList>
+      </StatsLi>
+    </StatsList>
   </Container>
 )};
